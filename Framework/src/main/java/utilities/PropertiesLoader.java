@@ -48,16 +48,6 @@ public class PropertiesLoader {
 
     public static String getAPIHost()
     {
-        if (isLocal()) {
-            return PropertiesLoader.getProperties().getProperty("testModeller.localApiHost");
-
-        } else {
-            return PropertiesLoader.getProperties().getProperty("testModeller.externalApiHost");
-        }
-    }
-
-    public static Boolean isLocal()
-    {
-         return Boolean.parseBoolean(PropertiesLoader.getProperties().getProperty("boavista.runLocal"));
+        return PropertiesLoader.getProperties().getProperty("testModeller.apiHost");
     }
 }
