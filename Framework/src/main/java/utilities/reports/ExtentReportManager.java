@@ -4,7 +4,9 @@ package utilities.reports;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.aventstack.extentreports.model.Media;
+import com.aventstack.extentreports.model.ScreenCapture;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import org.openqa.selenium.WebDriver;
 import org.sikuli.script.Screen;
 import utilities.Session;
@@ -30,7 +32,7 @@ public class ExtentReportManager {
 
     public static void setupReporter()
     {
-        ExtentHtmlReporter avent = new ExtentHtmlReporter(extentDir +  "/index.html");
+        ExtentSparkReporter avent = new ExtentSparkReporter(extentDir +  "/index.html");
 
         extentTestHash = new HashMap<Long, ExtentTest>();
 
@@ -90,7 +92,14 @@ public class ExtentReportManager {
 //            String capture = captureScreenshot(s, stepName);
 
 //            if (capture != null) {
-                extentTestHash.get(id).log(Status.PASS, stepName).addScreenCaptureFromBase64String(Base64.getEncoder().encodeToString(s.getScreenshot()), stepName);
+            String base64 = Base64.getEncoder().encodeToString(s.getScreenshot());
+            if (!base64.startsWith("data:")) {
+                base64 = "data:image/png;base64," + base64;
+            }
+
+            Media m = ScreenCapture.builder().base64(base64).title(stepName).build();
+
+            extentTestHash.get(id).log(Status.PASS, m);
 //            }
         } catch (IOException e) {
             e.printStackTrace();

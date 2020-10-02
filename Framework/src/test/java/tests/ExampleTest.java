@@ -2,6 +2,7 @@ package tests;
 
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+import pages.MainframeAutomation.*;
 import reports.ExtentTestListener;
 import reports.TestNGListener;
 
@@ -15,24 +16,40 @@ public class ExampleTest extends MainframeTestBase {
         // Wait for environment to load
         _MainframeCommands.WaitForChange(4000);
 
-        // Enter action
-        _MainframeCommands.EnterText("daefts");
-        _MainframeCommands.TypeEnter();
-        _MainframeCommands.WaitForChange(2000);
+        // Load app
+        MainApplication mainApplication = new MainApplication(session);
+        mainApplication.EnterApplication("daefts");
 
-        // Enter username
-        _MainframeCommands.EnterText("xrrisjp");
-        _MainframeCommands.TypeEnter();
-        _MainframeCommands.WaitForChange(2000);
+        Authentication authentication = new Authentication(session);
+        authentication.EnterUsername("xrrisjp");
+        authentication.EnterPassword("rissep20");
+        authentication.EnterTS0();
 
-        // Enter password
-        _MainframeCommands.EnterText("rissep20");
-        _MainframeCommands.TypeEnter();
-        _MainframeCommands.WaitForChange(2000);
-        
-        // LOgoff
-        _MainframeCommands.EnterText("LOGOFF");
-        _MainframeCommands.TypeEnter();
-        _MainframeCommands.WaitForChange(2000);
+        TS0Menu ts0Menu = new TS0Menu(session);
+        ts0Menu.OpenDataView();
+
+        DataFinder dataFinder = new DataFinder(session);
+
+        dataFinder.PerformDSNameSearch("XRRISJP.**.cntl");
+
+        dataFinder.BrowseCatalog();
+
+        dataFinder.FindDataSet("LISTCAT");
+
+        dataFinder.OpenDataSetBrowse();
+        dataFinder.SubmitDataSet();
+
+        // Back to TS0
+        ts0Menu.BackToTS0();
+
+        // Jobs
+        ts0Menu.OpenJobQueue();
+
+        JobSubmission jobSubmission = new JobSubmission(session);
+        jobSubmission.FindJob("PREFIX JP*");
+        jobSubmission.OpenJobDetails();
+        jobSubmission.OpenSysPrint();
+
+        mainApplication.Logoff();
     }
 }

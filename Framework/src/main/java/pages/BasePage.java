@@ -29,7 +29,7 @@ public class BasePage
         m_Session = session;
     }
 
-    protected Boolean containsText(String text, int maxTime)  {
+    public Boolean containsText(String text, int maxTime)  {
         waitForChange(2000);
 
         for (int i = 0; i < maxTime; i++) {

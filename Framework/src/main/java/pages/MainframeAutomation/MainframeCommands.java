@@ -103,13 +103,57 @@ public class MainframeCommands extends BasePage {
         }
     }
 
+    public void TypeF3()
+    {
+        try {
+            m_Session.writeKey(Key.PF3);
+
+            m_Session.waitForChange(2000);
+            m_Session.waitForChange(2000);
+
+        } catch (JagacyException e) {
+            ExtentReportManager.failStepWithScreenshot(m_Session, "Type F3", e.getMessage());
+
+            TestModellerLogger.FailStepWithScreenshot(m_Session, "Type F3", e.getMessage());
+
+            e.printStackTrace();
+
+            Assert.fail("Type enter failed");
+        }
+    }
+
     public void TypeEnter()
     {
         try {
             m_Session.writeKey(Key.ENTER);
 
-            m_Session.waitForChange(2000);
-            m_Session.waitForChange(2000);
+            try {
+                m_Session.waitForChange(2000);
+                m_Session.waitForChange(2000);
+
+            } catch (Exception e) {}
+
+        } catch (JagacyException e) {
+            ExtentReportManager.failStepWithScreenshot(m_Session, "Type enter", e.getMessage());
+
+            TestModellerLogger.FailStepWithScreenshot(m_Session, "Type enter", e.getMessage());
+
+            e.printStackTrace();
+
+            Assert.fail("Type enter failed");
+        }
+    }
+
+    public void TypeF8()
+    {
+        try {
+            m_Session.writeKey(Key.PF8);
+
+            try {
+                m_Session.waitForChange(2000);
+                m_Session.waitForChange(2000);
+
+            } catch (Exception e) {}
 
         } catch (JagacyException e) {
             ExtentReportManager.failStepWithScreenshot(m_Session, "Type enter", e.getMessage());
