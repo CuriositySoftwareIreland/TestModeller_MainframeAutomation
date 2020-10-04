@@ -16,6 +16,7 @@ public class MainApplication extends BasePage
 
     public void EnterApplication(String app)
     {
+        mainframeCommands.WaitForChange(12000);
         mainframeCommands.EnterText(app);
         mainframeCommands.TypeEnter();
         mainframeCommands.TypeEnter();
