@@ -10,14 +10,50 @@ import org.testng.annotations.Test;
 
 //http://mainframedemo.cloud.testinsights.io/app/#!/model-engine/guid/9590b59a-15d2-414c-8a4a-33e585c8f125
 @Listeners({TestNGListener.class, ExtentTestListener.class})
-@TestModellerSuite(id = 13, profileId = 100007)
+@TestModellerSuite(id = 14, profileId = 100007)
 public class SubmitUserSearch_DefaultProfile extends MainframeTestBase
 {
     
 
     
-    @Test  (groups= {"0334888c-5647-4839-8353-b58a58a0d036","Submit User Search","Submit User Search - Default Profile"})
-    @TestModellerPath(guid = "0334888c-5647-4839-8353-b58a58a0d036")
+    @Test  (groups= {"24c5c0fd-c42e-4d61-b84d-72754b02a8f0","Submit User Search","Submit User Search - Default Profile"})
+    @TestModellerPath(guid = "24c5c0fd-c42e-4d61-b84d-72754b02a8f0")
+    public void OpenApplicationEnterUsernameEnterPasswordAuthenticateErrorError6()
+    {
+        
+        pages.MainframeAutomation.MainApplication	_MainApplication = new pages.MainframeAutomation.MainApplication (session);
+    TestModellerLogger.SetLastNodeGuid("f08b5df1-16d7-41d8-b044-4ea5bb2deffa");
+    _MainApplication.EnterApplication("daefts");
+
+pages.MainframeAutomation.Authentication	_Authentication = new pages.MainframeAutomation.Authentication (session);
+    TestModellerLogger.SetLastNodeGuid("10612440-9f5d-408f-b9c9-6b9b5c222eac");
+    _Authentication.EnterUsername("invaliduser");
+
+    TestModellerLogger.SetLastNodeGuid("7fe2fd99-33f9-4e4e-ab66-be2d342b12c8");
+    _Authentication.EnterPassword("rissep20");
+
+    }
+
+    @Test  (groups= {"9575fb2a-df26-4e96-9ac3-02e6901f4ba3","Submit User Search","Submit User Search - Default Profile"})
+    @TestModellerPath(guid = "9575fb2a-df26-4e96-9ac3-02e6901f4ba3")
+    public void OpenApplicationEnterUsernameEnterPasswordAuthenticateErrorError2()
+    {
+        
+        pages.MainframeAutomation.MainApplication	_MainApplication = new pages.MainframeAutomation.MainApplication (session);
+    TestModellerLogger.SetLastNodeGuid("f08b5df1-16d7-41d8-b044-4ea5bb2deffa");
+    _MainApplication.EnterApplication("daefts");
+
+pages.MainframeAutomation.Authentication	_Authentication = new pages.MainframeAutomation.Authentication (session);
+    TestModellerLogger.SetLastNodeGuid("10612440-9f5d-408f-b9c9-6b9b5c222eac");
+    _Authentication.EnterUsername("invaliduser");
+
+    TestModellerLogger.SetLastNodeGuid("44d3ef58-72b2-40c4-a6b3-49a1646a2e45");
+    _Authentication.EnterPassword("asdjlk");
+
+    }
+
+    @Test  (groups= {"dae660b9-8cfc-411c-8e85-a9f20ac91e81","Submit User Search","Submit User Search - Default Profile"})
+    @TestModellerPath(guid = "dae660b9-8cfc-411c-8e85-a9f20ac91e81")
     public void OpenApplicationEnterUsernameEnterPasswordAuthenticateAuthenticatedJobTypeSearchfordatabyuser1()
     {
         
@@ -76,8 +112,8 @@ pages.MainframeAutomation.JobSubmission	_JobSubmission = new pages.MainframeAuto
 
     }
 
-    @Test  (groups= {"34a78c79-30da-436d-bc7c-1f18ccdb5685","Submit User Search","Submit User Search - Default Profile"})
-    @TestModellerPath(guid = "34a78c79-30da-436d-bc7c-1f18ccdb5685")
+    @Test  (groups= {"1379edf6-78c6-4c37-ab5e-3252594c3809","Submit User Search","Submit User Search - Default Profile"})
+    @TestModellerPath(guid = "1379edf6-78c6-4c37-ab5e-3252594c3809")
     public void OpenApplicationEnterUsernameEnterPasswordAuthenticateAuthenticatedJobTypeSearchfordatabyuser2()
     {
         
@@ -136,8 +172,8 @@ pages.MainframeAutomation.JobSubmission	_JobSubmission = new pages.MainframeAuto
 
     }
 
-    @Test  (groups= {"ee2d29a7-2103-4dd2-b7d3-08918852ad5a","Submit User Search","Submit User Search - Default Profile"})
-    @TestModellerPath(guid = "ee2d29a7-2103-4dd2-b7d3-08918852ad5a")
+    @Test  (groups= {"f4ff78c8-8891-4684-829e-46b8f4bf0638","Submit User Search","Submit User Search - Default Profile"})
+    @TestModellerPath(guid = "f4ff78c8-8891-4684-829e-46b8f4bf0638")
     public void OpenApplicationEnterUsernameEnterPasswordAuthenticateAuthenticatedJobTypeSearchfordatabyuser3()
     {
         
@@ -196,8 +232,8 @@ pages.MainframeAutomation.JobSubmission	_JobSubmission = new pages.MainframeAuto
 
     }
 
-    @Test  (groups= {"712be290-a0a3-407e-a162-ff92cf7b5e91","Submit User Search","Submit User Search - Default Profile"})
-    @TestModellerPath(guid = "712be290-a0a3-407e-a162-ff92cf7b5e91")
+    @Test  (groups= {"e5519f8f-64bf-4a18-b91a-9057d1ed9c4a","Submit User Search","Submit User Search - Default Profile"})
+    @TestModellerPath(guid = "e5519f8f-64bf-4a18-b91a-9057d1ed9c4a")
     public void OpenApplicationEnterUsernameEnterPasswordAuthenticateAuthenticatedJobTypeSearchfordatabyuser4()
     {
         
@@ -243,8 +279,8 @@ pages.MainframeAutomation.DataFinder	_DataFinder = new pages.MainframeAutomation
 
     }
 
-    @Test  (groups= {"17bf7f25-23d2-42d0-8130-aef6ae14c195","Submit User Search","Submit User Search - Default Profile"})
-    @TestModellerPath(guid = "17bf7f25-23d2-42d0-8130-aef6ae14c195")
+    @Test  (groups= {"2bc38a2b-f05e-4af0-8261-faaa005d5d6b","Submit User Search","Submit User Search - Default Profile"})
+    @TestModellerPath(guid = "2bc38a2b-f05e-4af0-8261-faaa005d5d6b")
     public void OpenApplicationEnterUsernameEnterPasswordAuthenticateErrorError5()
     {
         
@@ -257,42 +293,6 @@ pages.MainframeAutomation.Authentication	_Authentication = new pages.MainframeAu
     _Authentication.EnterUsername("xrrisjp");
 
     TestModellerLogger.SetLastNodeGuid("e7394c44-db70-43d8-870c-d6620d63f189");
-    _Authentication.EnterPassword("asdjlk");
-
-    }
-
-    @Test  (groups= {"b3aab6df-676f-4b44-a2e7-208840272c0d","Submit User Search","Submit User Search - Default Profile"})
-    @TestModellerPath(guid = "b3aab6df-676f-4b44-a2e7-208840272c0d")
-    public void OpenApplicationEnterUsernameEnterPasswordAuthenticateErrorError6()
-    {
-        
-        pages.MainframeAutomation.MainApplication	_MainApplication = new pages.MainframeAutomation.MainApplication (session);
-    TestModellerLogger.SetLastNodeGuid("f08b5df1-16d7-41d8-b044-4ea5bb2deffa");
-    _MainApplication.EnterApplication("daefts");
-
-pages.MainframeAutomation.Authentication	_Authentication = new pages.MainframeAutomation.Authentication (session);
-    TestModellerLogger.SetLastNodeGuid("10612440-9f5d-408f-b9c9-6b9b5c222eac");
-    _Authentication.EnterUsername("invaliduser");
-
-    TestModellerLogger.SetLastNodeGuid("7fe2fd99-33f9-4e4e-ab66-be2d342b12c8");
-    _Authentication.EnterPassword("rissep20");
-
-    }
-
-    @Test  (groups= {"530ec984-0205-4810-be08-3ee9bba49cdb","Submit User Search","Submit User Search - Default Profile"})
-    @TestModellerPath(guid = "530ec984-0205-4810-be08-3ee9bba49cdb")
-    public void OpenApplicationEnterUsernameEnterPasswordAuthenticateErrorError7()
-    {
-        
-        pages.MainframeAutomation.MainApplication	_MainApplication = new pages.MainframeAutomation.MainApplication (session);
-    TestModellerLogger.SetLastNodeGuid("f08b5df1-16d7-41d8-b044-4ea5bb2deffa");
-    _MainApplication.EnterApplication("daefts");
-
-pages.MainframeAutomation.Authentication	_Authentication = new pages.MainframeAutomation.Authentication (session);
-    TestModellerLogger.SetLastNodeGuid("10612440-9f5d-408f-b9c9-6b9b5c222eac");
-    _Authentication.EnterUsername("invaliduser");
-
-    TestModellerLogger.SetLastNodeGuid("44d3ef58-72b2-40c4-a6b3-49a1646a2e45");
     _Authentication.EnterPassword("asdjlk");
 
     }
