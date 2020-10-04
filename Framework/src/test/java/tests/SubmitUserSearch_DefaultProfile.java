@@ -10,14 +10,14 @@ import org.testng.annotations.Test;
 
 //http://mainframedemo.cloud.testinsights.io/app/#!/model-engine/guid/9590b59a-15d2-414c-8a4a-33e585c8f125
 @Listeners({TestNGListener.class, ExtentTestListener.class})
-@TestModellerSuite(id = 9, profileId = 100007)
+@TestModellerSuite(id = 10, profileId = 100007)
 public class SubmitUserSearch_DefaultProfile extends MainframeTestBase
 {
     
 
     
-    @Test  (groups= {"8d4e24a1-ee04-4f07-b429-f8a2a78304e8","Submit User Search","Submit User Search - Default Profile"})
-    @TestModellerPath(guid = "8d4e24a1-ee04-4f07-b429-f8a2a78304e8")
+    @Test  (groups= {"bb047fb2-e0fe-45b5-85d3-8be34e2961b4","Submit User Search","Submit User Search - Default Profile"})
+    @TestModellerPath(guid = "bb047fb2-e0fe-45b5-85d3-8be34e2961b4")
     public void OpenApplicationEnterUsernameEnterPasswordAuthenticateAuthenticatedJobTypeSearchfordatabyuser1()
     {
         
@@ -52,6 +52,12 @@ pages.MainframeAutomation.DataFinder	_DataFinder = new pages.MainframeAutomation
     TestModellerLogger.SetLastNodeGuid("3dbbe476-8e7b-427d-9157-0cf2963df3d7");
     _DataFinder.OpenDataSetBrowse();
 
+    TestModellerLogger.SetLastNodeGuid("f2b0a6c1-e329-4ed9-8cf5-c9a64ccd4da8");
+    _DataFinder.SubmitDataSet();
+
+    TestModellerLogger.SetLastNodeGuid("f2b0a6c1-e329-4ed9-8cf5-c9a64ccd4da8");
+    _TS0Menu.BackToTS0();
+
     TestModellerLogger.SetLastNodeGuid("0b37ed2e-9d60-44b8-9309-033ac0f83559");
     _TS0Menu.OpenJobQueue();
 
@@ -70,8 +76,8 @@ pages.MainframeAutomation.JobSubmission	_JobSubmission = new pages.MainframeAuto
 
     }
 
-    @Test  (groups= {"f3a73f50-6cd5-4db4-a378-5fae51cd4933","Submit User Search","Submit User Search - Default Profile"})
-    @TestModellerPath(guid = "f3a73f50-6cd5-4db4-a378-5fae51cd4933")
+    @Test  (groups= {"06f3e0c9-9500-4300-9b98-fa83bb7a7b65","Submit User Search","Submit User Search - Default Profile"})
+    @TestModellerPath(guid = "06f3e0c9-9500-4300-9b98-fa83bb7a7b65")
     public void OpenApplicationEnterUsernameEnterPasswordAuthenticateAuthenticatedJobTypeSearchfordatabyuser2()
     {
         
@@ -106,6 +112,12 @@ pages.MainframeAutomation.DataFinder	_DataFinder = new pages.MainframeAutomation
     TestModellerLogger.SetLastNodeGuid("3dbbe476-8e7b-427d-9157-0cf2963df3d7");
     _DataFinder.OpenDataSetBrowse();
 
+    TestModellerLogger.SetLastNodeGuid("f2b0a6c1-e329-4ed9-8cf5-c9a64ccd4da8");
+    _DataFinder.SubmitDataSet();
+
+    TestModellerLogger.SetLastNodeGuid("f2b0a6c1-e329-4ed9-8cf5-c9a64ccd4da8");
+    _TS0Menu.BackToTS0();
+
     TestModellerLogger.SetLastNodeGuid("0b37ed2e-9d60-44b8-9309-033ac0f83559");
     _TS0Menu.OpenJobQueue();
 
@@ -124,8 +136,8 @@ pages.MainframeAutomation.JobSubmission	_JobSubmission = new pages.MainframeAuto
 
     }
 
-    @Test  (groups= {"147c665d-f00d-406b-b937-2377c29caea7","Submit User Search","Submit User Search - Default Profile"})
-    @TestModellerPath(guid = "147c665d-f00d-406b-b937-2377c29caea7")
+    @Test  (groups= {"072bcd51-40af-4443-a0d0-50f0a8f9d1a1","Submit User Search","Submit User Search - Default Profile"})
+    @TestModellerPath(guid = "072bcd51-40af-4443-a0d0-50f0a8f9d1a1")
     public void OpenApplicationEnterUsernameEnterPasswordAuthenticateAuthenticatedJobTypeSearchfordatabyuser3()
     {
         
@@ -160,6 +172,12 @@ pages.MainframeAutomation.DataFinder	_DataFinder = new pages.MainframeAutomation
     TestModellerLogger.SetLastNodeGuid("3dbbe476-8e7b-427d-9157-0cf2963df3d7");
     _DataFinder.OpenDataSetBrowse();
 
+    TestModellerLogger.SetLastNodeGuid("f2b0a6c1-e329-4ed9-8cf5-c9a64ccd4da8");
+    _DataFinder.SubmitDataSet();
+
+    TestModellerLogger.SetLastNodeGuid("f2b0a6c1-e329-4ed9-8cf5-c9a64ccd4da8");
+    _TS0Menu.BackToTS0();
+
     TestModellerLogger.SetLastNodeGuid("0b37ed2e-9d60-44b8-9309-033ac0f83559");
     _TS0Menu.OpenJobQueue();
 
@@ -178,8 +196,8 @@ pages.MainframeAutomation.JobSubmission	_JobSubmission = new pages.MainframeAuto
 
     }
 
-    @Test  (groups= {"4b575ecd-18f8-4ebd-a3f0-7db2c08f467d","Submit User Search","Submit User Search - Default Profile"})
-    @TestModellerPath(guid = "4b575ecd-18f8-4ebd-a3f0-7db2c08f467d")
+    @Test  (groups= {"4110e796-d4a2-424f-9c23-f5f02185b086","Submit User Search","Submit User Search - Default Profile"})
+    @TestModellerPath(guid = "4110e796-d4a2-424f-9c23-f5f02185b086")
     public void OpenApplicationEnterUsernameEnterPasswordAuthenticateAuthenticatedJobTypeSearchfordatabyuser4()
     {
         
@@ -225,8 +243,8 @@ pages.MainframeAutomation.DataFinder	_DataFinder = new pages.MainframeAutomation
 
     }
 
-    @Test  (groups= {"4292952a-028b-4a50-83d9-88401334c750","Submit User Search","Submit User Search - Default Profile"})
-    @TestModellerPath(guid = "4292952a-028b-4a50-83d9-88401334c750")
+    @Test  (groups= {"1bdf94b2-fff1-4fe7-b625-c72fab1792f9","Submit User Search","Submit User Search - Default Profile"})
+    @TestModellerPath(guid = "1bdf94b2-fff1-4fe7-b625-c72fab1792f9")
     public void OpenApplicationEnterUsernameEnterPasswordAuthenticateErrorError5()
     {
         
@@ -243,8 +261,8 @@ pages.MainframeAutomation.Authentication	_Authentication = new pages.MainframeAu
 
     }
 
-    @Test  (groups= {"d5f63918-ddfc-441d-ba37-9b0c8c56bcbb","Submit User Search","Submit User Search - Default Profile"})
-    @TestModellerPath(guid = "d5f63918-ddfc-441d-ba37-9b0c8c56bcbb")
+    @Test  (groups= {"123249a3-d986-4ee7-9cc2-cec33ad41efb","Submit User Search","Submit User Search - Default Profile"})
+    @TestModellerPath(guid = "123249a3-d986-4ee7-9cc2-cec33ad41efb")
     public void OpenApplicationEnterUsernameEnterPasswordAuthenticateErrorError6()
     {
         
@@ -261,8 +279,8 @@ pages.MainframeAutomation.Authentication	_Authentication = new pages.MainframeAu
 
     }
 
-    @Test  (groups= {"d9b6bc0b-178d-4da5-ac8e-e208ce809924","Submit User Search","Submit User Search - Default Profile"})
-    @TestModellerPath(guid = "d9b6bc0b-178d-4da5-ac8e-e208ce809924")
+    @Test  (groups= {"29841fcf-ff3e-4dbd-8cf6-c0cfaf33d933","Submit User Search","Submit User Search - Default Profile"})
+    @TestModellerPath(guid = "29841fcf-ff3e-4dbd-8cf6-c0cfaf33d933")
     public void OpenApplicationEnterUsernameEnterPasswordAuthenticateErrorError7()
     {
         
