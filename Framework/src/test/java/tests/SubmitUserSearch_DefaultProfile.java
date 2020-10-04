@@ -10,14 +10,14 @@ import org.testng.annotations.Test;
 
 //http://mainframedemo.cloud.testinsights.io/app/#!/model-engine/guid/9590b59a-15d2-414c-8a4a-33e585c8f125
 @Listeners({TestNGListener.class, ExtentTestListener.class})
-@TestModellerSuite(id = 12, profileId = 100007)
+@TestModellerSuite(id = 13, profileId = 100007)
 public class SubmitUserSearch_DefaultProfile extends MainframeTestBase
 {
     
 
     
-    @Test  (groups= {"09d69c49-8ca5-4725-918a-699d08211fa2","Submit User Search","Submit User Search - Default Profile"})
-    @TestModellerPath(guid = "09d69c49-8ca5-4725-918a-699d08211fa2")
+    @Test  (groups= {"0334888c-5647-4839-8353-b58a58a0d036","Submit User Search","Submit User Search - Default Profile"})
+    @TestModellerPath(guid = "0334888c-5647-4839-8353-b58a58a0d036")
     public void OpenApplicationEnterUsernameEnterPasswordAuthenticateAuthenticatedJobTypeSearchfordatabyuser1()
     {
         
@@ -76,8 +76,8 @@ pages.MainframeAutomation.JobSubmission	_JobSubmission = new pages.MainframeAuto
 
     }
 
-    @Test  (groups= {"9902c32f-5855-412f-8501-6726ed82edc7","Submit User Search","Submit User Search - Default Profile"})
-    @TestModellerPath(guid = "9902c32f-5855-412f-8501-6726ed82edc7")
+    @Test  (groups= {"34a78c79-30da-436d-bc7c-1f18ccdb5685","Submit User Search","Submit User Search - Default Profile"})
+    @TestModellerPath(guid = "34a78c79-30da-436d-bc7c-1f18ccdb5685")
     public void OpenApplicationEnterUsernameEnterPasswordAuthenticateAuthenticatedJobTypeSearchfordatabyuser2()
     {
         
@@ -136,8 +136,8 @@ pages.MainframeAutomation.JobSubmission	_JobSubmission = new pages.MainframeAuto
 
     }
 
-    @Test  (groups= {"4b5b3fd1-dc9e-4508-a156-ffcf7ec5f423","Submit User Search","Submit User Search - Default Profile"})
-    @TestModellerPath(guid = "4b5b3fd1-dc9e-4508-a156-ffcf7ec5f423")
+    @Test  (groups= {"ee2d29a7-2103-4dd2-b7d3-08918852ad5a","Submit User Search","Submit User Search - Default Profile"})
+    @TestModellerPath(guid = "ee2d29a7-2103-4dd2-b7d3-08918852ad5a")
     public void OpenApplicationEnterUsernameEnterPasswordAuthenticateAuthenticatedJobTypeSearchfordatabyuser3()
     {
         
@@ -196,8 +196,8 @@ pages.MainframeAutomation.JobSubmission	_JobSubmission = new pages.MainframeAuto
 
     }
 
-    @Test  (groups= {"a6718e30-38d9-4d09-9744-04ea2ce2a283","Submit User Search","Submit User Search - Default Profile"})
-    @TestModellerPath(guid = "a6718e30-38d9-4d09-9744-04ea2ce2a283")
+    @Test  (groups= {"712be290-a0a3-407e-a162-ff92cf7b5e91","Submit User Search","Submit User Search - Default Profile"})
+    @TestModellerPath(guid = "712be290-a0a3-407e-a162-ff92cf7b5e91")
     public void OpenApplicationEnterUsernameEnterPasswordAuthenticateAuthenticatedJobTypeSearchfordatabyuser4()
     {
         
@@ -243,8 +243,8 @@ pages.MainframeAutomation.DataFinder	_DataFinder = new pages.MainframeAutomation
 
     }
 
-    @Test  (groups= {"0de6e12b-de26-40de-a3f5-666c85c31c60","Submit User Search","Submit User Search - Default Profile"})
-    @TestModellerPath(guid = "0de6e12b-de26-40de-a3f5-666c85c31c60")
+    @Test  (groups= {"17bf7f25-23d2-42d0-8130-aef6ae14c195","Submit User Search","Submit User Search - Default Profile"})
+    @TestModellerPath(guid = "17bf7f25-23d2-42d0-8130-aef6ae14c195")
     public void OpenApplicationEnterUsernameEnterPasswordAuthenticateErrorError5()
     {
         
@@ -261,8 +261,8 @@ pages.MainframeAutomation.Authentication	_Authentication = new pages.MainframeAu
 
     }
 
-    @Test  (groups= {"3cc938a8-c6d5-49ca-9337-ef52427f361e","Submit User Search","Submit User Search - Default Profile"})
-    @TestModellerPath(guid = "3cc938a8-c6d5-49ca-9337-ef52427f361e")
+    @Test  (groups= {"b3aab6df-676f-4b44-a2e7-208840272c0d","Submit User Search","Submit User Search - Default Profile"})
+    @TestModellerPath(guid = "b3aab6df-676f-4b44-a2e7-208840272c0d")
     public void OpenApplicationEnterUsernameEnterPasswordAuthenticateErrorError6()
     {
         
@@ -279,8 +279,8 @@ pages.MainframeAutomation.Authentication	_Authentication = new pages.MainframeAu
 
     }
 
-    @Test  (groups= {"35cd143b-7e22-4903-b885-d2d9b952eb76","Submit User Search","Submit User Search - Default Profile"})
-    @TestModellerPath(guid = "35cd143b-7e22-4903-b885-d2d9b952eb76")
+    @Test  (groups= {"530ec984-0205-4810-be08-3ee9bba49cdb","Submit User Search","Submit User Search - Default Profile"})
+    @TestModellerPath(guid = "530ec984-0205-4810-be08-3ee9bba49cdb")
     public void OpenApplicationEnterUsernameEnterPasswordAuthenticateErrorError7()
     {
         
