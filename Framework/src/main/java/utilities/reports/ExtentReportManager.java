@@ -7,8 +7,6 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.model.Media;
 import com.aventstack.extentreports.model.ScreenCapture;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
-import org.openqa.selenium.WebDriver;
-import org.sikuli.script.Screen;
 import utilities.Session;
 
 import java.io.FileOutputStream;

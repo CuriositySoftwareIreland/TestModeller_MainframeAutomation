@@ -1,8 +1,6 @@
 package tests;
 
 import com.jagacy.util.JagacyException;
-import org.sikuli.script.ImagePath;
-import org.sikuli.script.Screen;
 import utilities.PropertiesLoader;
 //import utilities.reports.ExtentReportManager;
 import ie.curiositysoftware.allocation.dto.AllocationType;
@@ -49,8 +47,6 @@ public class TestBase {
     @BeforeSuite(alwaysRun = true)
     public void setup()
     {
-        ImagePath.setBundlePath(System.getProperty("user.dir") + "\\imgs\\");
-
         ExtentReportManager.setupReporter();
     }
 

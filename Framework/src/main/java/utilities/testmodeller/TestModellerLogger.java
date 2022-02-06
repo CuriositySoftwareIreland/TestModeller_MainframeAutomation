@@ -3,7 +3,6 @@ package utilities.testmodeller;
 import ie.curiositysoftware.runresult.dto.TestPathRunStatusEnum;
 import ie.curiositysoftware.runresult.dto.TestPathRunStep;
 import org.openqa.selenium.WebDriver;
-import org.sikuli.script.Screen;
 import utilities.Session;
 
 import javax.imageio.ImageIO;

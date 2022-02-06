@@ -1,7 +1,6 @@
 package tests;
 
 import com.jagacy.util.JagacyException;
-import org.sikuli.script.Screen;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
