@@ -14,7 +14,7 @@ import java.lang.reflect.Method;
 
 public class MainframeTestBase extends TestBase {
     @BeforeMethod(alwaysRun = true)
-    public void openDB2() throws JagacyException {
+    public void openMainframe() throws JagacyException {
         session = new Session("JegacySession");
 
 		session.getProperties().set("jagacy.host", PropertiesLoader.getProperties().getProperty("mainframe.host"));
@@ -24,7 +24,7 @@ public class MainframeTestBase extends TestBase {
     }
 
     @AfterMethod(alwaysRun = true)
-    public void closeDB2() throws JagacyException {
+    public void closeMainframe() throws JagacyException {
         session.close();
     }
 }

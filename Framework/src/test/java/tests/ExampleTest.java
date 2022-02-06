@@ -15,41 +15,12 @@ public class ExampleTest extends MainframeTestBase {
 
         // Wait for environment to load
         _MainframeCommands.WaitForChange(4000);
-
-        // Load app
-        MainApplication mainApplication = new MainApplication(session);
-        mainApplication.EnterApplication("daefts");
-
-        Authentication authentication = new Authentication(session);
-        authentication.EnterUsername("xrrisjp");
-        authentication.EnterPassword("rissep20");
-        authentication.EnterTS0();
-
-        TS0Menu ts0Menu = new TS0Menu(session);
-        ts0Menu.OpenDataView();
-
-        DataFinder dataFinder = new DataFinder(session);
-
-        dataFinder.PerformDSNameSearch("XRRISJP.**.cntl");
-
-        dataFinder.BrowseCatalog();
-
-        dataFinder.FindDataSet("LISTCAT");
-
-        dataFinder.OpenDataSetBrowse();
-        dataFinder.SubmitDataSet();
-
-        // Back to TS0
-        ts0Menu.BackToTS0();
-
-        // Jobs
-        ts0Menu.OpenJobQueue();
-
-        JobSubmission jobSubmission = new JobSubmission(session);
-        jobSubmission.FindJob("PREFIX JP*");
-        jobSubmission.OpenJobDetails();
-        jobSubmission.OpenSysPrint();
-
-        mainApplication.Logoff();
+        _MainframeCommands.CaptureScreenshot("Login application");
+        _MainframeCommands.EnterText("demo");
+        _MainframeCommands.TypeTab();
+        _MainframeCommands.EnterText("demo");
+        _MainframeCommands.TypeEnter();
+        _MainframeCommands.WaitForChange(12000);
+        _MainframeCommands.CaptureScreenshot("Authenticated");
     }
 }

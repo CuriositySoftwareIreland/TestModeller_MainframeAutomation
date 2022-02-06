@@ -33,8 +33,9 @@ public class ExtentTestListener extends TestBase implements ITestListener {
     public void onTestSuccess(ITestResult iTestResult) {
         Object testClass = iTestResult.getInstance();
 
-        Session s = ((TestBase) testClass).getSession();
+        TestBase tb = (TestBase) testClass;
 
+        Session s = tb.getSession();
         ExtentReportManager.passStepWithScreenshot(s, "Test Passed");
     }
 
@@ -42,7 +43,9 @@ public class ExtentTestListener extends TestBase implements ITestListener {
     public void onTestFailure(ITestResult iTestResult) {
         Object testClass = iTestResult.getInstance();
 
-        Session s = ((TestBase) testClass).getSession();
+        TestBase tb = (TestBase) testClass;
+
+        Session s = tb.getSession();
 
         ExtentReportManager.failStepWithScreenshot(s, "Test Failure");
 
