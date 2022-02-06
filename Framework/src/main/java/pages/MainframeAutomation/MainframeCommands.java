@@ -129,15 +129,15 @@ public class MainframeCommands extends BasePage {
 
     }
 
-    public void CommandPA(String number)
+    public void CommandPA(String paNumber)
     {
         try {
-            m_Session.writeKey(convertToKey("PA" + number));
+            m_Session.writeKey(convertToKey("PA" + paNumber));
             m_Session.waitForChange(2000);
         } catch (JagacyException e) {
-            ExtentReportManager.failStepWithScreenshot(m_Session, "Type PA" + number, e.getMessage());
+            ExtentReportManager.failStepWithScreenshot(m_Session, "Type PA" + paNumber, e.getMessage());
 
-            TestModellerLogger.FailStepWithScreenshot(m_Session, "Type PA" + number, e.getMessage());
+            TestModellerLogger.FailStepWithScreenshot(m_Session, "Type PA" + paNumber, e.getMessage());
 
             e.printStackTrace();
 
