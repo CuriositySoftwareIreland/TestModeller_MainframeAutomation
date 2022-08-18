@@ -39,6 +39,7 @@ public class MainframeTestBase extends TestBase {
 
     @AfterMethod(alwaysRun = true)
     public void closeMainframe() throws JagacyException {
-        session.close();
+		if (session != null)
+	        session.close();
     }
 }

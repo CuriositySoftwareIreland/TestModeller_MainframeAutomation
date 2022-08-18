@@ -1,1 +1,73 @@
-{"id":100002,"name":"Mainframe Framework","mergeCode":true,"type":"TestCase","language":"Java","languageExtension":".java","builtIn":false,"items":[{"id":229,"name":"TestCaseTemplate","code":"package tests;\n\nimport utilities.testmodeller.TestModellerLogger;\nimport ie.curiositysoftware.testmodeller.TestModellerPath;\nimport reports.ExtentTestListener;\nimport reports.TestNGListener;\nimport ie.curiositysoftware.testmodeller.TestModellerSuite;\nimport org.testng.annotations.Listeners;\nimport org.testng.annotations.Test;\n\n//{{{ModelURL}}}\n@Listeners({TestNGListener.class, ExtentTestListener.class})\n@TestModellerSuite(id = {{{test-suite-id}}}, profileId = {{{test-profile-id}}})\npublic class {{{TestCaseName}}} extends MainframeTestBase\n{\n    //Region - Testcases\n\n    //EndRegion - Testcases\n}","functionParameters":[],"templateId":100002},{"id":230,"name":"TestCaseMethodTemplate","code":"    @Test  (groups= {{{{groups}}}})\n    @TestModellerPath(guid = {{{test-guid}}})\n    public void {{{TestName}}}()\n    {\n        //Region - Test Logic\n        //EndRegion - Test Logic\n    }\n","functionParameters":[],"templateId":100002},{"id":231,"name":"TestCaseRepeaterTemplate","functionParameters":[],"templateId":100002},{"id":232,"name":"InitializePageObjectTemplate","code":"{{{CodeGenObjectType}}}\t{{{CodeGenerationObjectVariableName}}} = new {{{CodeGenObjectType}}} (session);","functionParameters":[],"templateId":100002},{"id":233,"name":"AllocateTagTemplate","code":"@DataAllocation(poolName = \"{{{AllocatePoolName}}}\", suiteName = \"{{{AllocateSuiteName}}}\", groups = {\"{{{AllocateGroupName}}}\"})","functionParameters":[],"templateId":100002},{"id":234,"name":"AllocateRetrieveDataValueTemplate","code":"dataRow.get(\"{{{AllocateColumnName}}}\").toString()","functionParameters":[],"templateId":100002},{"id":235,"name":"FunctionCallTemplate","code":"    TestModellerLogger.SetLastNodeGuid(\"{{{NodeGuid}}}\");\n    {{{CodeGenerationObjectVariableName}}}.{{{CodeGenerationFunctionName}}}({{{CodeGenerationFunctionParameters}}});","functionParameters":[],"templateId":100002},{"id":236,"name":"FunctionCallWithReturnTemplate","code":"    TestModellerLogger.SetLastNodeGuid(\"{{{NodeGuid}}}\");\n    {{{CodeGenObjectReturnType}}} {{{CodeGenFunctionReturnParamName}}} = {{{CodeGenerationObjectVariableName}}}.{{{CodeGenerationFunctionName}}}({{{CodeGenerationFunctionParameters}}});","functionParameters":[],"templateId":100002},{"id":237,"name":"TestCaseMethodAllocateTemplate","code":"    @Test  (groups= {{{{groups}}}})\n    @TestModellerPath(guid = {{{test-guid}}})\n    {{{AllocateTag}}}\n    public void {{{TestName}}}()\n    {\n        DataAllocationResult allocResult =  dataAllocationEngine.getDataResult(\"{{{AllocatePoolName}}}\", \"{{{AllocateSuiteName}}}\", \"{{{AllocateGroupName}}}\", ResultMergeMethod.MinimumProductLoopBack);\n\n        for (DataAllocationRow dataRow : allocResult.getDataRows()) {\n            //Region - Test Logic\n            //EndRegion - Test Logic\n        }\n    }","functionParameters":[],"templateId":100002}]}
+{
+  "id": 100002,
+  "name": "Mainframe Framework",
+  "mergeCode": true,
+  "type": "TestCase",
+  "language": "Java",
+  "languageExtension": ".java",
+  "builtIn": false,
+  "items": [
+    {
+      "id": 229,
+      "name": "TestCaseTemplate",
+      "code": "package tests;\n\nimport utilities.testmodeller.TestModellerLogger;\nimport ie.curiositysoftware.testmodeller.TestModellerPath;\nimport reports.ExtentTestListener;\nimport reports.TestNGListener;\nimport ie.curiositysoftware.testmodeller.TestModellerSuite;\nimport org.testng.annotations.Listeners;\nimport org.testng.annotations.Test;\n\n//{{{ModelURL}}}\n@Listeners({TestNGListener.class, ExtentTestListener.class})\n@TestModellerSuite(id = {{{test-suite-id}}}, profileId = {{{test-profile-id}}})\npublic class {{{TestCaseName}}} extends EmptyMainframeTestBase\n{\n    //Region - Testcases\n\n    //EndRegion - Testcases\n}",
+      "functionParameters": [],
+      "templateId": 100002
+    },
+    {
+      "id": 230,
+      "name": "TestCaseMethodTemplate",
+      "code": "    @Test  (groups= {{{{groups}}}})\n    @TestModellerPath(guid = {{{test-guid}}})\n    public void {{{TestName}}}()\n    {\n        //Region - Test Logic\n        //EndRegion - Test Logic\n    }\n",
+      "functionParameters": [],
+      "templateId": 100002
+    },
+    {
+      "id": 231,
+      "name": "TestCaseRepeaterTemplate",
+      "functionParameters": [],
+      "templateId": 100002
+    },
+    {
+      "id": 232,
+      "name": "InitializePageObjectTemplate",
+      "code": "{{{CodeGenObjectType}}}\t{{{CodeGenerationObjectVariableName}}} = new {{{CodeGenObjectType}}} (session);",
+      "functionParameters": [],
+      "templateId": 100002
+    },
+    {
+      "id": 233,
+      "name": "AllocateTagTemplate",
+      "code": "@DataAllocation(poolName = \"{{{AllocatePoolName}}}\", suiteName = \"{{{AllocateSuiteName}}}\", groups = {\"{{{AllocateGroupName}}}\"})",
+      "functionParameters": [],
+      "templateId": 100002
+    },
+    {
+      "id": 234,
+      "name": "AllocateRetrieveDataValueTemplate",
+      "code": "dataRow.get(\"{{{AllocateColumnName}}}\").toString()",
+      "functionParameters": [],
+      "templateId": 100002
+    },
+    {
+      "id": 235,
+      "name": "FunctionCallTemplate",
+      "code": "    TestModellerLogger.SetLastNodeGuid(\"{{{NodeGuid}}}\");\n    {{{CodeGenerationObjectVariableName}}}.{{{CodeGenerationFunctionName}}}({{{CodeGenerationFunctionParameters}}});",
+      "functionParameters": [],
+      "templateId": 100002
+    },
+    {
+      "id": 236,
+      "name": "FunctionCallWithReturnTemplate",
+      "code": "    TestModellerLogger.SetLastNodeGuid(\"{{{NodeGuid}}}\");\n    {{{CodeGenObjectReturnType}}} {{{CodeGenFunctionReturnParamName}}} = {{{CodeGenerationObjectVariableName}}}.{{{CodeGenerationFunctionName}}}({{{CodeGenerationFunctionParameters}}});",
+      "functionParameters": [],
+      "templateId": 100002
+    },
+    {
+      "id": 237,
+      "name": "TestCaseMethodAllocateTemplate",
+      "code": "    @Test  (groups= {{{{groups}}}})\n    @TestModellerPath(guid = {{{test-guid}}})\n    {{{AllocateTag}}}\n    public void {{{TestName}}}()\n    {\n        DataAllocationResult allocResult =  dataAllocationEngine.getDataResult(\"{{{AllocatePoolName}}}\", \"{{{AllocateSuiteName}}}\", \"{{{AllocateGroupName}}}\", ResultMergeMethod.MinimumProductLoopBack);\n\n        for (DataAllocationRow dataRow : allocResult.getDataRows()) {\n            //Region - Test Logic\n            //EndRegion - Test Logic\n        }\n    }",
+      "functionParameters": [],
+      "templateId": 100002
+    }
+  ]
+}

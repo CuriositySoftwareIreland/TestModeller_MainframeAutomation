@@ -5,6 +5,7 @@ import com.jagacy.Key;
 import com.jagacy.util.JagacyException;
 import org.testng.Assert;
 import pages.BasePage;
+import utilities.PropertiesLoader;
 import utilities.Session;
 import utilities.fields.EntryField;
 import utilities.fields.LabelField;
@@ -22,11 +23,72 @@ public class MainframeCommands extends BasePage {
         super(s);
     }
 
+    /**
+     * Set SSL enabled (true) or disabled (false)
+     * @name Set SSL
+     */
+    public void SetSSL(Boolean ssl)
+    {
+        m_Session.getProperties().set("jagacy.ssl", ssl.toString());
+    }
+
+    /**
+     * Set SSL Context
+     * @name Set SSL Context
+     */
+    public void SetSSLContext(String sslContext)
+    {
+        m_Session.getProperties().set("jagacy.ssl.context", sslContext);
+    }
+
+    /**
+     * Set the type of terminal being consumed
+     * @name Set Terminal Type
+     */
+    public void SetTerminalType(String terminal)
+    {
+        m_Session.getProperties().set("jagacy.terminal", terminal);
+    }
+
+    /**
+     * Set the LU Name of the device
+     * @name Set Device Name
+     */
+    public void SetDeviceName(String deviceName)
+    {
+        m_Session.getProperties().set("deviceName", deviceName);
+    }
+
+    /**
+     * Open Connection to the mainframe environment
+     * @name Open Connection
+     */
+    public void OpenConnection(String host, String port)
+    {
+        m_Session.getProperties().set("jagacy.host", host);
+        m_Session.getProperties().set("jagacy.port", port);
+
+        try {
+            m_Session.open();
+        } catch (JagacyException e) {
+            e.printStackTrace();
+        }
+        new MainframeCommands(m_Session).WaitForChange(2000);
+    }
+
+    /**
+     * Wait for text to appear in the terminal output.
+     * @name Wait For Text
+     */
     public void WaitForText(String text)
     {
         containsText(text, 10);
     }
 
+    /**
+     * Wait for the terminal output to update.
+     * @name Wait For Change
+     */
     public void WaitForChange(int length)
     {
         try {
@@ -36,6 +98,10 @@ public class MainframeCommands extends BasePage {
         }
     }
 
+    /**
+     * Wait for text to appear at the specified location in the terminal window.
+     * @name Wait For Text
+     */
     public void WaitForText(int row, int col, String text)
     {
         try {
@@ -52,6 +118,10 @@ public class MainframeCommands extends BasePage {
 
     }
 
+    /**
+     * Enter text at a specified location on the terminal window.
+     * @name Enter Text at Location
+     */
     public void EnterText(int row, int col, String text)
     {
         try {
@@ -67,6 +137,10 @@ public class MainframeCommands extends BasePage {
         }
     }
 
+    /**
+     * Enter text into the terminal window in the selected field.
+     * @name Enter Text
+     */
     public void EnterText(String text)
     {
         try {
@@ -87,6 +161,10 @@ public class MainframeCommands extends BasePage {
         }
     }
 
+    /**
+     * Assert text is present at a specified location in the terminal output.
+     * @name Assert Text Present At Location
+     */
     public void AssertTextPresent(int row, int col, String text)
     {
         if (!containsText(text, 5)) {
@@ -98,6 +176,10 @@ public class MainframeCommands extends BasePage {
         }
     }
 
+    /**
+     * Assert text is present in the terminal output.
+     * @name Assert Text Present
+     */
     public void AssertTextPresent(String text)
     {
         if (!containsText(text, 5)) {
@@ -109,6 +191,10 @@ public class MainframeCommands extends BasePage {
         }
     }
 
+    /**
+     * Enter PF command into the terminal.
+     * @name Enter PF Command
+     */
     public void CommandPF(String fNumber)
     {
         try {
@@ -125,10 +211,12 @@ public class MainframeCommands extends BasePage {
             Assert.fail("Type F1 failed");
 
         }
-
-
     }
 
+    /**
+     * Enter PA command into the terminal.
+     * @name Enter PA Command
+     */
     public void CommandPA(String paNumber)
     {
         try {
@@ -146,6 +234,10 @@ public class MainframeCommands extends BasePage {
         }
     }
 
+    /**
+     * Enter a specific key command
+     * @name Enter Key Command
+     */
     public void EnterKeyCommand(Key key)
     {
         try {
@@ -163,7 +255,10 @@ public class MainframeCommands extends BasePage {
         }
     }
 
-
+    /**
+     * Press Enter command.
+     * @name Type Enter
+     */
     public void TypeEnter()
     {
         try {
@@ -180,6 +275,10 @@ public class MainframeCommands extends BasePage {
         }
     }
 
+    /**
+     * Press Tab command.
+     * @name Type Tab
+     */
     public void TypeTab()
     {
         try {
@@ -195,6 +294,10 @@ public class MainframeCommands extends BasePage {
         }
     }
 
+    /**
+     * Press Clear command.
+     * @name Type Clear
+     */
     public void TypeClear()
     {
         try {
@@ -210,6 +313,10 @@ public class MainframeCommands extends BasePage {
         }
     }
 
+    /**
+     * Press Home command.
+     * @name Type Home
+     */
     public void TypeHome()
     {
         try {
@@ -225,11 +332,19 @@ public class MainframeCommands extends BasePage {
         }
     }
 
+    /**
+     * Capture screenshot.
+     * @name Capture Screenshot
+     */
     public void CaptureScreenshot()
     {
         CaptureScreenshot("");
     }
 
+    /**
+     * Capture screenshot.
+     * @name Capture Screenshot
+     */
     public void CaptureScreenshot(String message)
     {
         ExtentReportManager.passStepWithScreenshot(m_Session, message);
@@ -237,6 +352,10 @@ public class MainframeCommands extends BasePage {
         TestModellerLogger.PassStepWithScreenshot(m_Session,message);
     }
 
+    /**
+     * Wait for the keyboard to unlock
+     * @name Wait Keyboard Unlock
+     */
     public void WaitKeyboardUnlocked() throws InterruptedException {
         this.waitKeyboardUnlocked(this.DEFAULT_SECS);
     }
