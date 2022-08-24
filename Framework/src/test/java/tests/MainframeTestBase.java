@@ -17,24 +17,26 @@ public class MainframeTestBase extends TestBase {
     public void openMainframe() throws JagacyException {
         session = new Session("JegacySession");
 
-		session.getProperties().set("jagacy.host", PropertiesLoader.getProperties().getProperty("mainframe.host"));
-		session.getProperties().set("jagacy.port", PropertiesLoader.getProperties().getProperty("mainframe.port"));
-
-		if ((!PropertiesLoader.getProperties().getProperty("mainframe.ssl").equals("")) && (!PropertiesLoader.getProperties().getProperty("mainframe.ssl").equals("Off"))) {
+		if ((!PropertiesLoader.getProperties().getProperty("mainframe.ssl").trim().isEmpty()) && (!PropertiesLoader.getProperties().getProperty("mainframe.ssl").equals("Off"))) {
 			session.getProperties().set("jagacy.ssl.context", PropertiesLoader.getProperties().getProperty("mainframe.ssl"));
 			session.getProperties().set("jagacy.ssl", "true");
 		}
 
-		if (!PropertiesLoader.getProperties().getProperty("mainframe.terminal").equals("")) {
+		if (!PropertiesLoader.getProperties().getProperty("mainframe.terminal").trim().isEmpty()) {
 			session.getProperties().set("jagacy.terminal", PropertiesLoader.getProperties().getProperty("mainframe.terminal"));
 		}
 		
-		if (!PropertiesLoader.getProperties().getProperty("mainframe.deviceName").equals("")) {
+		if (!PropertiesLoader.getProperties().getProperty("mainframe.deviceName").trim().isEmpty()) {
 			session.getProperties().set("deviceName", PropertiesLoader.getProperties().getProperty("mainframe.deviceName"));
 		}
 
-        session.open();
-        new MainframeCommands(session).WaitForChange(2000);
+		if (!PropertiesLoader.getProperties().getProperty("mainframe.host").trim().isEmpty() && !PropertiesLoader.getProperties().getProperty("mainframe.port").trim().isEmpty()) {
+			session.getProperties().set("jagacy.host", PropertiesLoader.getProperties().getProperty("mainframe.host"));
+			session.getProperties().set("jagacy.port", PropertiesLoader.getProperties().getProperty("mainframe.port"));
+
+			session.open();
+			new MainframeCommands(session).WaitForChange(2000);
+		}
     }
 
     @AfterMethod(alwaysRun = true)
