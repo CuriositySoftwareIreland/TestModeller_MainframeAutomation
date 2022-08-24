@@ -5,7 +5,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import utilities.Session;
 
-public class EmptyMainframeTestBase extends MainframeTestBase {
+public class EmptyMainframeTestBase extends TestBase {
     @BeforeMethod(alwaysRun = true)
     public void openMainframe() throws JagacyException {
         session = new Session("JegacySession");
