@@ -3,6 +3,7 @@ package pages.MainframeAutomation;
 import com.jagacy.Field;
 import com.jagacy.Key;
 import com.jagacy.util.JagacyException;
+import ie.curiositysoftware.testmodeller.TestModellerIgnore;
 import org.testng.Assert;
 import pages.BasePage;
 import utilities.PropertiesLoader;
@@ -18,6 +19,7 @@ public class MainframeCommands extends BasePage {
 
     public int DEFAULT_SECS = 60;
 
+    @TestModellerIgnore
     public MainframeCommands(Session s)
     {
         super(s);

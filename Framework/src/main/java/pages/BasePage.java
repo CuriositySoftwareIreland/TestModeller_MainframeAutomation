@@ -1,6 +1,7 @@
 package pages;
 
 import com.jagacy.util.JagacyException;
+import ie.curiositysoftware.testmodeller.TestModellerIgnore;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -17,12 +18,14 @@ import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+@TestModellerIgnore
 public class BasePage
 {
     protected Session m_Session;
 
     protected String m_BaseImageFolder;
 
+    @TestModellerIgnore
     public BasePage(Session session)
     {
         m_Session = session;
