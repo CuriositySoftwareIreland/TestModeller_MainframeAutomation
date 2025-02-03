@@ -1,12 +1,9 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
 <suite name="TestAll">
-    <test name="All" parallel="false">
-        <groups>
-            <run></run>
-        </groups>
+    <test name="All" parallel="methods">
         <packages>
-            <package name=".*" />
+            <package name="tests" />
         </packages>
     </test>
-
 </suite>
